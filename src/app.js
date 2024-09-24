@@ -16,6 +16,8 @@ function generateCard() {
   const ico = document.querySelector("#card-icon");
 
   const icons = ["♦", "♥", "♠", "♣"];
+  const colors = ["red", "black"];
+
   const numbers = [
     "2",
     "3",
@@ -26,16 +28,19 @@ function generateCard() {
     "8",
     "9",
     "10",
-    "Jack",
+    "𝓙",
     "♛",
     "♚",
-    "Ace"
+    "⩜"
   ];
 
   const randomIcons = icons[Math.floor(Math.random() * icons.length)];
   const randomNumbers = numbers[Math.floor(Math.random() * numbers.length)];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
   numberRan.innerHTML = randomNumbers;
   icono.innerHTML = randomIcons;
   ico.innerHTML = randomIcons;
+  icono.style.color = randomColor;
+  ico.style.color = randomColor;
 }
